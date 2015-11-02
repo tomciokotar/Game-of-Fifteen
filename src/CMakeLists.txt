@@ -16,6 +16,6 @@ set (HEADERS
 )
 
 qt4_wrap_cpp (SOURCES ${HEADERS})
-add_executable (Przesuwanka ${SOURCES})
-target_link_libraries (Przesuwanka ${QT_LIBRARIES})
+add_executable (Game-of-Fifteen ${SOURCES})
+target_link_libraries (Game-of-Fifteen ${QT_LIBRARIES})
 
