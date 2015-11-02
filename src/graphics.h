@@ -1,13 +1,13 @@
-#ifndef GRAFIKA_H
-#define GRAFIKA_H
+#ifndef GRAPHICS_H
+#define GRAPHICS_H
 
 #include <QGraphicsView>
 #include <QMouseEvent>
 
-class grafika : public QGraphicsView
+class Graphics : public QGraphicsView
 {
 protected:
 	void mousePressEvent(QMouseEvent *);
 };
 
-#endif // GRAFIKA_H
+#endif // GRAPHICS_H

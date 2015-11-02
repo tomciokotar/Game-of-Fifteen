@@ -1,16 +1,16 @@
 #include <QtGui/QApplication>
-#include "mainwindow.h"
+#include "mainWindow.h"
 #include <QTextCodec>
 
 int main(int argc, char *argv[])
 {
-	QApplication a(argc, argv);
-	MainWindow w;
+	QApplication app(argc, argv);
+	MainWindow window;
 
 	QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
-	w.setWindowTitle("Przesuwanka");
+	window.setWindowTitle("Game of Fifteen");
 
-	w.show();
+	window.show();
 
-	return a.exec();
+	return app.exec();
 }

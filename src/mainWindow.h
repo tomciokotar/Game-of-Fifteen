@@ -12,9 +12,9 @@
 #include <QApplication>
 #include <QLabel>
 #include <QMessageBox>
-#include "klocek.h"
-#include "grafika.h"
-#include "plansza.h"
+#include "tile.h"
+#include "graphics.h"
+#include "board.h"
 #include <QResizeEvent>
 #include <QGraphicsRectItem>
 #include <QGraphicsWidget>
@@ -24,17 +24,17 @@ class MainWindow : public QMainWindow
 {
 	Q_OBJECT
 
-	grafika *gview;
+	Graphics *gview;
 	QGraphicsScene *scene;
-	QMenu *nowagra, *opcje, *pomoc;
-	QAction *latwy, *sredni, *trudny, *random;
-	QAction *nastepny, *cofnij, *pokaz, *zatrzymaj;
-	QAction *info;
-	QLabel *licznik;
+	QMenu *newGameMenu, *optionsMenu, *helpMenu;
+	QAction *easyGame, *mediumGame, *hardGame;	// *randomGame;
+	QAction *nextMove, *previousMove, *solve, *stopSolving;
+	QAction *getInfo;
+	QLabel *counter;
 
-	klocek *kloc[16];
-	plansza *planszaDoGry;
-	QTimer *zegar;
+	Tile *tiles[16];
+	Board *gameBoard;
+	QTimer *timer;
 
 public:
 	MainWindow(QWidget *parent = 0);
@@ -42,20 +42,20 @@ public:
 
 	void resizeEvent(QResizeEvent *);
 	void keyPressEvent(QKeyEvent *);
-	void generujPlansze();
-		void generujGre(int);
+	void generateBoard();
+	void generateGame(int);
 
 private slots:
-	void wiadomosc();
-	void genLatwy();
-	void genSredni();
-	void genTrudny();
-	void genRandom();
-	void cofanie();
-	void doPrzodu();
-	void dawajRozw();
-	void wygrana();
-	void stop();
+	void showInstructions();
+	void generateEasy();
+	void generateMedium();
+	void generateHard();
+	void generateRandom();
+	void moveBack();
+	void moveForward();
+	void showSolution();
+	void gameFinished();
+	void solvingStopped();
 };
 
 #endif // MAINWINDOW_H

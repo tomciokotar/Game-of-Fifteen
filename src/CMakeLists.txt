@@ -1,18 +1,18 @@
 set (SOURCES
- grafika.cpp
- klocek.cpp
+ graphics.cpp
+ tile.cpp
  main.cpp
- mainwindow.cpp
- plansza.cpp
- stanplanszy.cpp
+ mainWindow.cpp
+ board.cpp
+ boardState.cpp
 )
 
 set (HEADERS
- grafika.h
- klocek.h
- mainwindow.h
- plansza.h
- stanplanszy.h
+ graphics.h
+ tile.h
+ mainWindow.h
+ board.h
+ boardState.h
 )
 
 qt4_wrap_cpp (SOURCES ${HEADERS})

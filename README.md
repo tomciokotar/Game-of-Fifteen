@@ -1,10 +1,10 @@
-# Przesuwanka
-Popularna gra w piętnastkę w Qt4. Cztery poziomy trudności, algorytm A* do wyszukiwania rozwiązania.
+# Game of Fifteen
+A popular Game of Fifteen in Qt4. Three difficulty levels, A* algorithm for automatic solving.
 
-Zasady gry: http://pl.wikipedia.org/wiki/Pi%C4%99tnastka_%28uk%C5%82adanka%29
+More: en.wikipedia.org/wiki/15_puzzle
 
-# Kompilacja
-```$ cmake . && make``` (wymagane Qt4)
+# Compilation
+```$ cmake . && make``` (Qt4 and cmake required)
 
-# Uruchamianie
+# Running
 ```$ ./bin/Przesuwanka```
