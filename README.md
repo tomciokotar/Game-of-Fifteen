@@ -7,4 +7,4 @@ More: en.wikipedia.org/wiki/15_puzzle
 ```$ cmake . && make``` (Qt4 and cmake required)
 
 # Running
-```$ ./bin/Przesuwanka```
+```$ ./bin/Game-of-Fifteen```
