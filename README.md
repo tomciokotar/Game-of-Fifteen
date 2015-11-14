@@ -6,5 +6,5 @@ More: en.wikipedia.org/wiki/15_puzzle
 # Compilation
 ```$ cmake . && make``` (Qt4 and cmake required)
 
-# Running
+# How to run
 ```$ ./bin/Game-of-Fifteen```
